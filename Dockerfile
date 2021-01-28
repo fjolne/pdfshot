@@ -46,5 +46,7 @@ USER pptruser
 
 COPY --from=builder /build/target/pdfshot.js .
 
+EXPOSE 8000
+
 ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["node", "/app/pdfshot.js"]
